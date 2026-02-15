@@ -53,7 +53,7 @@ database=[]
 # loop runeer
 while True:
        firstname=name(input('First Name: '))
-       lastname=name(nput('Last Name: ').capitalize())
+       lastname=name(input('Last Name: ').capitalize())
        email=checkemail(input('enter a valid email: ')).lower()
        temppassword=input('create passeord: ')
        confrimedpassword=psdconfirm(temppassword)
