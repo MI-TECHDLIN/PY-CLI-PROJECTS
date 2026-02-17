@@ -6,14 +6,14 @@ import getpass
 # string checker
 def name(p):
         while True:
-              if(re.fullmatch(r'[A-Za-b]$',p,re.I)):
+              if(re.match(r'[A-Za-z]+$',p,re.I)):
                      return p
               else:
                      k=input('Invalid name format: ')
-                     if (re.fullmatch(r'[A-Za-z]$',k,re.I)):
+                     if (re.match(r'[A-Za-z]',k,re.I)):
                             
                             
-                            return 
+                            return k
 # agechecker
 def ager(n):
        while True:
@@ -23,12 +23,9 @@ def ager(n):
                           return k
                 else: 
                                    k=int(input('invalid Age: ') )
-                                   if (k >= 1):
-                                           break 
         except ValueError:
-                 k=input('invalid Age: ')
-            
-
+                n =input('invalid Age format: ')
+               
 # emailcehcker
 def checkemail(email):
        while True:
@@ -41,7 +38,7 @@ def checkemail(email):
                             return k
 
 # passwordchecker
-def psdconfirm(t=""):
+def psdconfirm(t=""):       
       con=input('confirm password: ')
       while t!=con:     
                  con=input('invlaid password: ')
@@ -53,7 +50,7 @@ database=[]
 # loop runeer
 while True:
        firstname=name(input('First Name: '))
-       lastname=name(input('Last Name: ').capitalize())
+       lastname=name(input('Last Name: '))
        email=checkemail(input('enter a valid email: ')).lower()
        temppassword=input('create passeord: ')
        confrimedpassword=psdconfirm(temppassword)
