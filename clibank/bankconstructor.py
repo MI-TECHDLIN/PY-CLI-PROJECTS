@@ -8,18 +8,18 @@ class bankp:
         self.deposit=deposit
         self.withdrawl=withdrawl
         self.description=description
-    def transfer(t):
+    def transfer(t=0):
      
      transfer,description=t.balance - t.transfer,s.description
      return t.balance,description
 
-    def Deposit(d):
+    def Deposit(d=0):
      
      deposit=d.deposit
      balance=d.balance + deposit
      return balance,deposit
 
-    def withdrawl(w):  
+    def withdrawl(w=0):  
      withdrawl=w.withdrawl
      balance=w.balance - withdrawl
      return balance,withdrawl
@@ -35,24 +35,4 @@ class bankp:
 
    
 
-        
-
-def main():
-    amount,description=transfer(transferamount=20,description='for daddy')
-
-    print(f'Balance: ${amount}, Description: {description}',)
-
-
-
-
-
-
-
-
-
-
-
-
-
-if __name__ == '__main__':
-    main()
+    
