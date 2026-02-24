@@ -1,4 +1,5 @@
-balance=200
+
+
 
 class bankp:
     def __init__(self,balance=0,transfer=0,deposit=0,withdrawl=0,description=""):
@@ -7,15 +8,29 @@ class bankp:
         self.deposit=deposit
         self.withdrawl=withdrawl
         self.description=description
-   
+    def transfer(t):
+     
+     transfer,description=t.balance - t.transfer,s.description
+     return t.balance,description
+
+    def Deposit(d):
+     
+     deposit=d.deposit
+     balance=d.balance + deposit
+     return balance,deposit
+
+    def withdrawl(w):  
+     withdrawl=w.withdrawl
+     balance=w.balance - withdrawl
+     return balance,withdrawl
+    
+    
 
             
-def transfer(transferamount,description):
-        bank=bankp(balance=balance,transfer=transferamount,description=description)
-        suce=bank.balance - bank.transfer
-        return suce,bank.description
 
 
+
+     
         
 
    
