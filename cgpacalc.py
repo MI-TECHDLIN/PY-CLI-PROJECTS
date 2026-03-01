@@ -1,4 +1,5 @@
 import re
+import math
 def grade(n=0):
     # re.search('A'):
     # re.sub(f'{'B'}',4,n)
@@ -67,7 +68,7 @@ for gp, unit in courses.values():
     total_points += gp * unit
     total_units+= unit
 gpa=total_points/total_units
-print("GPA:=",gpa)
+print(f"GPA' = {math.floor(gpa)} -- {'good score' if gpa > 4.5 else 'dey play with your lifedd'}  ")
 
 if __name__ == '__main__':
     main()
