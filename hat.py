@@ -4,4 +4,4 @@ class Hat:
 
 
 hat = Hat()
-print(hat.sort('haarry'))
+hat.sort('haarry')
