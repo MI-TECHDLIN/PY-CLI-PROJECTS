@@ -22,6 +22,7 @@ def question(q):
       return mode(int(input('what number do you want to get the most common number')))
    
 
+
 def moreq():
      s=input('Any other Caluclations? y / n ')
      
