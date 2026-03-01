@@ -1,38 +1,48 @@
-from bankconstructor import bankp
+from bankconstructor import bankconc
+from bankfunction import bankfunc
 
-balance=2500
 
-def userrequest():
-    bank=bankp(balance=balance)
-    
+def userrequest(): 
     print(f'_________________(((((((Welcome to Cli Banking)))))))_______________')
+    balance=2500
+    bank=bankconc(balance)
+    func=bankfunc
     
-    user=input('what do you want to do today \n Press: \n T - Transfer \n D - Depsoit \n W - Withdrawl\n B - Check Balance (: ' )
-
-
-   
-    
-    
-    
-   
     
     while True:
-        if user == 't':
-           transfer=int(input('how much do you want to Transfer: '))
-           r=bank.transfer(transfer,'dddd')
-           print(r)
-        elif user == 'd':
-          deposit=int(input('how much do you want to Deposit: '))
-          print(bank.deposit(deposit))
-        elif user == 'w':
-           withdrawl=int(input('how much do you want to Withdrawl: '))
-           print(bank.withdrawl(withdrawl))
-        elif user == 'b':
-         print(bank.balance)
+           
+              user=input('what do you want to do today \n Press: \n T - Transfer \n D - Depsoit \n W - Withdrawl\n B - Check Balance (: ' )
+        
+              
+              if user == 't':
+               transfe=int(input('how much do you want to Transfer: '))
+               transfdes=input('Description: ')
+               bank.transfer=transfe
+               bank.description=transfdes
+               r=func.transfer(bank.balance,bank.transfer,bank.description)
+               print(r)
 
-        d= input('do you want to proccess anything? y/n').lower()
-        if not d == 'y':
-         break
+              elif user == 'd':
+               deposit=int(input('how much do you want to Deposit: '))
+               print(bank.deposit(deposit))
+
+              elif user == 'w':
+               withdrawl=int(input('how much do you want to Withdrawl: '))
+               print(bank.withdrawl(withdrawl))
+
+              elif user == 'b':
+               print(bank.balance),
+          
+
+              d= input('do you want to proccess anything? y/n').lower()
+              if  d == 'y':
+               break
+            
+
+           
+        
+
+   
 
 
 
